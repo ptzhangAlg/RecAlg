@@ -1,0 +1,177 @@
+{
+    "base_info": {
+        "train_path": "./data/kdd12/data/",
+        "concat_path": "./data/kdd12/concat/",
+        "sparse_path": "./data/kdd12/sparse/",
+        "dense_path": "./data/kdd12/dense/",
+        "k_fold_path": "./data/kdd12/k_fold/",
+        "k_fold": 10,
+        "random_seed": 2018
+    },
+    "model": {
+        "data_prefix": "./data/kdd12/k_fold/",
+        "train_paths": ["part0", "part1", "part2", "part3", "part4", "part5", "part6", "part7"],
+        "valid_paths": ["part8"],
+        "test_paths": ["part9"],
+        "results_prefix": "./data/model/",
+        "train_results_file": "train_results.txt",
+        "test_results_file": "test_results.txt"
+    },
+    "features": [
+        {
+            "name": "label",
+            "type": "label",
+            "dtype": "int32"
+        },
+        {
+            "name": "Impression",
+            "type": "dense",
+            "dtype": "float32",
+	        "feature_num": 3357,
+            "feature_info_gain": 0.003125,
+            "feature_ig": 0.003485,
+            "feature_attention":16.3908,
+            "feature_origin_num": 0.1538
+        },
+        {
+            "name": "DisplayURL",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.012621,
+            "feature_ig": 0.001278,
+            "feature_attention":-1.3437,
+            "feature_origin_num": 0.1333
+        },
+        {
+            "name": "AdID",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.023368,
+            "feature_ig": 0.001626,
+            "feature_attention":24.8785,
+            "feature_origin_num": 0.2222
+        },
+        {
+            "name": "AdvertiserID",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.012569,
+            "feature_ig": 0.001292,
+            "feature_attention":-15.1511,
+            "feature_origin_num": 0.1053
+        },
+        {
+            "name": "Depth",
+            "type": "dense",
+            "dtype": "float32",
+            "feature_num": 3,
+            "feature_info_gain": 0.001303,
+            "feature_ig": 0.000858,
+            "feature_attention":-34.9466,
+            "feature_origin_num": 0.0800
+        },
+        {
+            "name": "Position",
+            "type": "dense",
+            "dtype": "float32",
+            "feature_num": 3,
+            "feature_info_gain": 0.003600,
+            "feature_ig": 0.002832,
+            "feature_attention":-7.0461,
+            "feature_origin_num": 0.0909
+        },
+        {
+            "name": "QueryID",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.027631,
+            "feature_ig": 0.002421,
+            "feature_attention":4.0461,
+            "feature_origin_num": 0.2500
+        },
+        {
+            "name": "KeywordID",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.023030,
+            "feature_ig": 0.001600,
+            "feature_attention":0.7922,
+            "feature_origin_num": 0.1667
+        },
+        {
+            "name": "TitleID",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.028599,
+            "feature_ig": 0.001867,
+            "feature_attention":-10.1859,
+            "feature_origin_num": 0.1538
+        },
+        {
+            "name": "DescriptionID",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.025758,
+            "feature_ig": 0.001747,
+            "feature_attention":25.7454,
+            "feature_origin_num": 0.3333
+        },
+        {
+            "name": "UserID",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.025656,
+            "feature_ig": 0.002800,
+            "feature_attention":6.0242,
+            "feature_origin_num": 0.3333
+        },
+        {
+            "name": "Gender",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.001086,
+            "feature_ig": 0.000609,
+            "feature_attention":-20.1411,
+            "feature_origin_num": 0.0870
+        },
+        {
+            "name": "Age",
+            "type": "sparse",
+            "dimension": 0,
+            "use_hash": false,
+            "dtype": "int32",
+            "embedding": true,
+            "feature_info_gain": 0.001241,
+            "feature_ig": 0.000444,
+            "feature_attention":28.7298,
+            "feature_origin_num": 0.1818
+        }
+    ]
+}
